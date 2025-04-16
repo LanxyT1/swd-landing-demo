@@ -13,7 +13,7 @@ export default function MainPage() {
     return (
         <div className={styles.wrapper}>
             <Image className={styles.flow}
-                   src="/flow.svg"
+                   src="/src/assets/svgs/flow.svg"
                    alt="Flow"
                    width={0}
                    height={0} />
