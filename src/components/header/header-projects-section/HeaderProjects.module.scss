@@ -1,0 +1,49 @@
+@import "../../../styles/variables";
+
+.projectSectionWrapper {
+  margin-top: $indent-mini;
+  display: flex;
+  flex-direction: column;
+  gap: $indent-mini;
+
+  .sectionDescription {
+    font-size: 16px;
+    line-height: 32px;
+    max-width: 700px;
+    margin-bottom: $indent-main;
+  }
+
+  .cardsWrapper {
+    display: flex;
+    gap: $indent-main;
+    margin-bottom: $indent-max;
+
+    .card {
+      width: 100%;
+      border-radius: $border-radius-medium;
+      border: $swd-border;
+      padding: $indent-main;
+
+      .linkOptions {
+        margin-top: $indent-main;
+
+        .link {
+          color: $swd-primary-color;
+
+          +.link {
+            margin-top: $indent-mini-plus;
+          }
+        }
+      }
+
+      .icon {
+        margin-bottom: $indent-main;
+      }
+
+      .cardTitle {
+        font-weight: 600;
+        height: 50px;
+      }
+    }
+  }
+}

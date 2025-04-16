@@ -3,7 +3,10 @@ import React from "react";
 import Link from "next/link";
 import {useRouter} from "next/router";
 // Components
-// import {SwdFactoryIcon} from "@/assets/svgs";
+import Button from "@/components/button/button";
+import HeaderProjectsSection from "@/components/header/header-projects-section/header-projects";
+// Icons
+import SwdFactoryLogo from "@/assets/svgs/swd-factory-logo";
 // Styles
 import styles from "@/components/header/Header.module.scss"
 
@@ -33,7 +36,7 @@ const Header = () => {
                 <div className={`${styles.headerContainer} ${isProjectSelected && styles.expandedHeader}`}>
                     <div className={styles.topSection}>
                         <Link href="/" shallow>
-                            {/*<SwdFactoryIcon className={`${styles.logoButton} dark`} />*/}
+                            <SwdFactoryLogo className={`${styles.logoButton} dark`}/>
                         </Link>
 
                         <div className={styles.headerActions}>
@@ -42,6 +45,16 @@ const Header = () => {
                             <div className={styles.option}>Partners</div>
                             <div className={styles.option}>How we work</div>
                         </div>
+
+                        <div className={styles.contactButton}
+                             onClick={() => window.location.href = "mailto:contact@example.com"}>
+                            <Button text="Contact us"
+                                       showForwardIcon={true}/>
+                        </div>
+                    </div>
+
+                    <div className={`${styles.projectSectionWrapper} ${isProjectSelected && styles.opened}`}>
+                        <HeaderProjectsSection />
                     </div>
                 </div>
             </header>

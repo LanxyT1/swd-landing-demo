@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+
+.swdButton {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: inherit;
+  height: 46px;
+  font-weight: 500;
+  padding: 0 $indent-main;
+  border-radius: $border-radius-large;
+  font-size: 16px;
+  border: none;
+  transition: $transition-animate;
+  font-family: inherit;
+
+  &:hover {
+    background: $swd-primary-color-hover;
+    border-radius: $border-radius-small;
+
+    .buttonRightIcon {
+      transform: translateX(-5px);
+    }
+  }
+
+  &.primary {
+    background: $swd-primary-color;
+    color: #FFFFFF;
+  }
+
+  &.secondary {
+    background: #FFFFFF;
+    border: none;
+    color: $swd-primary-color;
+  }
+
+  &.focus {
+    border-radius: $border-radius-small;
+  }
+
+  .buttonRightIcon {
+    display: flex;
+    margin-left: $indent-mini-plus;
+    transition: $transition-animate;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+}

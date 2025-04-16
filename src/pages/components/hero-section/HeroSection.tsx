@@ -1,7 +1,7 @@
 // Next Imports
 import React from "react";
 // Components
-// import SwdButton from "@/components/button/b";
+// import Button from "@/components/button/b";
 // import {SwdFactoryIcon} from "@/assets/svgs";
 // Styles
 import styles from "./HeroSection.module.scss";
@@ -24,7 +24,7 @@ const HeroSection = () => {
           </div>
 
           <div className={styles.heroActionSection}>
-              {/*<SwdButton text="Contact us"*/}
+              {/*<Button text="Contact us"*/}
               {/*           showForwardIcon={true}/>*/}
           </div>
       </div>

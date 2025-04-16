@@ -9,7 +9,7 @@ const Footer = () => {
     return (
       <footer className={styles.footer}>
           <div className={styles.section}>
-              <SwdFactoryLogo className="light" />
+              <SwdFactoryLogo className="light"/>
           </div>
 
           <div className={styles.lineBreak}></div>
