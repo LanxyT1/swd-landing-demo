@@ -23,7 +23,8 @@ const Hero = () => {
               </div>
           </div>
 
-          <div className={styles.heroActionSection}>
+          <div className={styles.heroActionSection}
+               onClick={() => window.location.href = "mailto:info@swdfactory.com"}>
               <Button text="Contact us"
                          showForwardIcon={true}/>
           </div>

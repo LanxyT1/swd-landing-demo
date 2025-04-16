@@ -1,0 +1,49 @@
+@import "../../../styles/variables";
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  box-sizing: border-box;
+  gap: $indent-main;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $indent-max-plus $indent-main;
+    gap: $indent-main;
+    min-width: 100%;
+    box-sizing: border-box;
+    border-radius: $border-radius-medium;
+    background-color: #FFFFFF;
+    line-height: 32px;
+    transition: $transition-animate;
+
+    &:nth-child(3n-1):nth-last-of-type(1) {
+      border-color: red;
+      grid-column: span 2;
+    }
+
+    &:nth-child(3n-2):nth-last-of-type(1) {
+      border-color: red;
+      grid-column: span 3;
+    }
+
+    .cardTitle {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: $indent-midi;
+      box-sizing: border-box;
+
+      li {
+        + li {
+          margin-top: $indent-mini;
+        }
+      }
+    }
+  }
+}

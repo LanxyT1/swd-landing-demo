@@ -46,7 +46,7 @@ const Header = () => {
                             <div className={styles.option}>How we work</div>
 
                             <div className={styles.contactButton}
-                                 onClick={() => window.location.href = "mailto:contact@example.com"}>
+                                 onClick={() => window.location.href = "mailto:info@swdfactory.com"}>
                                 <Button text="Contact us"
                                         showForwardIcon={true}/>
                             </div>

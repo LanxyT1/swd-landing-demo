@@ -1,0 +1,154 @@
+@import "../../styles/variables";
+
+.wrapper {
+  background: $background-color;
+  border-radius: 0 0 $border-radius-large $border-radius-large;
+  display: flex;
+  flex-direction: column;
+  gap: calc($indent-max-plus + $padding-step);
+
+  .section {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: $content-max-width;
+
+    &:last-child {
+      margin-bottom: $container-section-margin;
+    }
+
+    &.rowSection {
+      flex-direction: row;
+      gap: calc($indent-max-plus + $padding-step);
+    }
+
+    .heroSection {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: calc($container-section-margin / 2) 0 0;
+      background-color: rgba($swd-primary-color, 0.06);
+      border-radius: $border-radius-medium;
+      padding: $indent-max-plus;
+      box-sizing: border-box;
+      gap: $indent-midi;
+      position: relative;
+      overflow: hidden;
+
+      .heroTitleSection {
+        font-size: 40px;
+      }
+
+      .icon {
+        margin-bottom: $indent-main;
+      }
+
+      .backgroundIcon,
+      .blobBlur {
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .backgroundIcon {
+        right: -40px;
+        bottom: -80px;
+      }
+
+      .blobBlur {
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    .overviewSection {
+      width: 100%;
+      height: fit-content;
+      padding: $indent-main;
+      background-color: rgba($swd-primary-color, 0.06);
+      border-radius: $border-radius-medium;
+      box-sizing: border-box;
+      transition: $transition-animate;
+      position: sticky;
+      top: 140px;
+
+      .row + .row {
+        margin-top: $indent-main;
+      }
+
+      .title {
+        margin-bottom: $indent-mini-plus;
+        font-weight: 700;
+      }
+
+      .description {
+        line-height: 32px;
+      }
+    }
+
+    .projectsSection {
+      width: 100%;
+
+      .expandCard {
+        background-color: #fff;
+        border-radius: $border-radius-medium;
+        padding: $indent-main;
+        box-sizing: border-box;
+        transition: $transition-animate;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba($swd-primary-color, 0.06);
+          border-radius: $border-radius-small;
+        }
+
+        &.expanded {
+          cursor: default;
+
+          &:hover {
+            background-color: #fff;
+            border-radius: $border-radius-medium;
+          }
+
+          .title {
+            margin-bottom: $indent-mini-plus;
+          }
+
+          .cardContent {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+          }
+        }
+
+        & + .expandCard {
+          margin-top: $indent-midi;
+        }
+
+        .title {
+          margin-bottom: 0;
+          transition: $transition-animate;
+          font-weight: 700;
+        }
+
+        .cardContent {
+          overflow: hidden;
+          max-height: 0;
+          opacity: 0;
+          transition: $transition-animate;
+          transform: translateY(-$indent-midi) scale(0.9);
+          pointer-events: none;
+
+          .description {
+            line-height: 32px;
+            margin-bottom: $indent-main;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

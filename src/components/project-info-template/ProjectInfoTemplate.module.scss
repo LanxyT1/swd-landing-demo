@@ -1,0 +1,68 @@
+@import "../../styles/variables";
+
+$text-max-width: 70%;
+
+.wrapper {
+  background: $background-color;
+  border-bottom-right-radius: $border-radius-large;
+  border-bottom-left-radius: $border-radius-large;
+  display: flex;
+  flex-direction: column;
+  gap: $indent-max;
+
+  .section {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: calc($container-section-margin / 2);
+
+    &.footerSection {
+      max-width: $content-max-width;
+
+      .footer {
+        line-height: 32px;
+        max-width: 70%;
+      }
+    }
+
+    span {
+      font-size: 16px;
+      margin-left: 0;
+      text-align: left;
+    }
+
+    &:last-child {
+      margin-bottom: $container-section-margin;
+    }
+
+    .heroSection {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: calc($container-section-margin / 2) auto;
+      max-width: $content-max-width;
+      background-color: rgba($swd-primary-color, .06);
+      border-radius: $border-radius-medium;
+      padding: $indent-max-plus;
+      box-sizing: border-box;
+      gap: $indent-max-plus;
+
+      .heroTitleSection {
+        font-size: 40px;
+        max-width: $text-max-width;
+      }
+
+      .heroDescription {
+        margin: 0;
+        line-height: 32px;
+        max-width: $text-max-width;
+      }
+    }
+
+    .containerWrapper {
+      display: flex;
+      gap: $indent-main;
+    }
+  }
+}

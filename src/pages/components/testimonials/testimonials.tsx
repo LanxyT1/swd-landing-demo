@@ -80,8 +80,11 @@ const TestimonialSection: React.FC = () => {
                 <div className={styles.banner}>
                     Interested in partnering with us?
 
-                    <Button text="Contact us"
-                               showForwardIcon={true}/>
+                    <div className={styles.heroActionSection}
+                         onClick={() => window.location.href = "mailto:info@swdfactory.com"}>
+                        <Button text="Contact us"
+                                showForwardIcon={true}/>
+                    </div>
                 </div>
             </div>
         </Container>

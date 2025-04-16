@@ -1,0 +1,26 @@
+@import "../../../styles/variables";
+
+$text-max-width: 70%;
+
+.list {
+  width: 100%;
+  margin: 0;
+
+  .card {
+    padding: $indent-midi $indent-main;
+    box-sizing: border-box;
+    border-radius: $border-radius-medium;
+    background-color: #FFFFFF;
+    line-height: 32px;
+    transition: $transition-animate;
+
+    +.card {
+      margin-top: $indent-main;
+    }
+
+    span {
+      max-width: $text-max-width;
+      line-height: 32px;
+    }
+  }
+}
