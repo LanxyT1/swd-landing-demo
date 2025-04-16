@@ -1,0 +1,13 @@
+@import "src/styles/variables";
+
+.dark {
+  path {
+    fill: $swd-primary-text-color !important;
+  }
+}
+
+.light {
+  path {
+    fill: #FFFFFF !important;
+  }
+}

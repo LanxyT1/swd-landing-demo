@@ -1,0 +1,53 @@
+@import "variables";
+
+$margin-large: 60px;
+
+.footer {
+  max-width: $content-max-width;
+  margin: $container-section-margin auto;
+
+  .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .rowSection {
+      display: flex;
+      align-items: center;
+
+      .contactInfo {
+        display: flex;
+        flex-direction: column;
+
+        +.contactInfo {
+          margin-left: $indent-main;
+        }
+
+        span {
+          opacity: 1;
+          margin-bottom: $indent-midi;
+        }
+
+        a {
+          color: #FFFFFF;
+          text-decoration: underline;
+        }
+      }
+
+      span {
+        margin-right: $indent-main;
+      }
+    }
+
+    span {
+      opacity: .82;
+      color: #FFFFFF;
+    }
+  }
+
+  .lineBreak {
+    margin: $margin-large 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+}

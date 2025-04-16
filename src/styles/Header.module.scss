@@ -1,0 +1,110 @@
+@import "../../styles/variables";
+
+.headerWrapper {
+  height: $container-section-margin;
+  background: $background-color;
+
+  .header {
+    width: 100%;
+    position: fixed;
+    top: $indent-midi-plus;
+    z-index: 2;
+
+    .headerContainer {
+      position: absolute;
+      left: 0;
+      right: 0;
+      max-width: $content-max-width;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-inline: auto;
+      padding: 0 $indent-max-plus;
+      background: #FFFFFF;
+      border-radius: $border-radius-large;
+      box-shadow: $box-shadow;
+      transition: $transition-animate;
+      z-index: 2;
+
+      &.expandedHeader {
+        border-radius: 40px;
+      }
+
+      .topSection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: $indent-midi 0;
+
+        .logoButton {
+          cursor: pointer;
+          height: 18px;
+        }
+
+        .headerActions {
+          display: flex;
+          align-items: center;
+
+          .option {
+            padding: 0 $indent-midi-plus;
+            cursor: pointer;
+            transition: $transition-animate;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+
+            &.selectedOption {
+              color: $swd-primary-color;
+            }
+          }
+
+          .contactButton {
+            margin-left: $indent-midi-plus;
+          }
+        }
+      }
+
+      .projectSectionWrapper {
+        opacity: 0;
+        transform: translateY(-30px);
+        pointer-events: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: $transition-animate;
+
+        &.opened {
+          opacity: 1;
+          transform: translateY(0px);
+          pointer-events: all;
+          max-height: 550px;
+        }
+      }
+    }
+  }
+
+  .headerBackdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background: $background-color;
+    transition: $transition-animate;
+    z-index: 1;
+
+    &.opened {
+      visibility: visible;
+      opacity: .82;
+    }
+  }
+
+  .headerFader {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: $background-color;
+    height: calc($header-height);
+    z-index: 1;
+  }
+}

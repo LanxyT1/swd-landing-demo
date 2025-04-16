@@ -1,0 +1,26 @@
+@import "src/styles/variables";
+@import "src/styles/parts/index";
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  background-color: $swd-primary-color;
+  color: $swd-primary-text-color;
+  font-size: 16px;
+}
+
+button,
+a {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+a {
+  display: flex;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
