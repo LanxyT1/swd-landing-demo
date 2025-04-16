@@ -15,21 +15,25 @@ const Footer = () => {
           <div className={styles.lineBreak}></div>
 
           <div className={styles.section}>
-              <div className={styles.contactInfo}>
-                  <span>E-mail address</span>
-                  <a href="mailto:info@swdfactory.com">
-                      info@swdfactory.com
-                  </a>
+              <div className={styles.rowSection}>
+                  <div className={styles.contactInfo}>
+                      <span>E-mail address</span>
+                      <a href="mailto:info@swdfactory.com">
+                          info@swdfactory.com
+                      </a>
+                  </div>
+
+                  <div className={styles.contactInfo}>
+                      <span>Office location</span>
+                      <a href={addressLink}
+                         target="_blank"
+                         rel="noopener noreferrer">
+                          Turaides st. 10, Riga, Latvia
+                      </a>
+                  </div>
               </div>
 
-              <div className={styles.contactInfo}>
-                  <span>Office location</span>
-                  <a href={addressLink}
-                     target="_blank"
-                     rel="noopener noreferrer">
-                      Turaides st. 10, Riga, Latvia
-                  </a>
-              </div>
+              <span>© 2025 SWD Factory. All Rights Reserved.</span>
           </div>
       </footer>
     );
