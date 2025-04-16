@@ -8,12 +8,15 @@ import Partnership from "@/pages/components/partnenship/partnership";
 import Testimonial from "@/pages/components/testimonials/testimonials";
 // Styles
 import styles from "@/pages/Index.module.scss";
+// Config
+import config from "../../next.config";
 
 export default function MainPage() {
+    const flowPathUrl = `${config.basePath}/flow.svg`
     return (
         <div className={styles.wrapper}>
             <Image className={styles.flow}
-                   src="/flow.svg"
+                   src={flowPathUrl}
                    alt="Flow"
                    width={0}
                    height={0} />
