@@ -1,5 +1,5 @@
 // Components
-// import {SwdFactoryIcon} from "@/assets/icons";
+import {SwdFactoryIcon} from "../../assets/svgs";
 // Styles
 import styles from "@/components/footer/Footer.module.scss"
 
@@ -9,7 +9,7 @@ const Footer = () => {
     return (
       <footer className={styles.footer}>
           <div className={styles.section}>
-              {/*<SwdFactoryIcon className="light" />*/}
+              <SwdFactoryIcon className="light" />
           </div>
 
           <div className={styles.lineBreak}></div>

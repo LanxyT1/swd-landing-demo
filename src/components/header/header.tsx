@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import {useRouter} from "next/router";
 // Components
-// import {SwdFactoryIcon} from "@/assets/icons";
+// import {SwdFactoryIcon} from "@/assets/svgs";
 // Styles
 import styles from "@/components/header/Header.module.scss"
 

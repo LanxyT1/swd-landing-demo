@@ -2,10 +2,9 @@
 import React from "react";
 // Components
 // import SwdButton from "@/components/button/b";
-// import {SwdFactoryIcon} from "@/assets/icons";
+// import {SwdFactoryIcon} from "@/assets/svgs";
 // Styles
 import styles from "./HeroSection.module.scss";
-
 
 const HeroSection = () => {
   return (
