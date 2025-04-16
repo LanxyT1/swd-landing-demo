@@ -1,15 +1,15 @@
 // Next Imports
 import React from "react";
 // Components
-// import Button from "@/components/button/b";
-// import {SwdFactoryIcon} from "@/assets/svgs";
+import Button from "@/components/button/button";
+import SwdFactoryIcon from "@/assets/svgs/swd-factory-logo";
 // Styles
 import styles from "./HeroSection.module.scss";
 
 const HeroSection = () => {
   return (
       <div className={styles.heroSection}>
-          {/*<SwdFactoryIcon className="dark" />*/}
+          <SwdFactoryIcon className="dark" />
 
           <div className={styles.heroTitleSection}>
               <div className={styles.titleRow}>
@@ -24,8 +24,8 @@ const HeroSection = () => {
           </div>
 
           <div className={styles.heroActionSection}>
-              {/*<Button text="Contact us"*/}
-              {/*           showForwardIcon={true}/>*/}
+              <Button text="Contact us"
+                         showForwardIcon={true}/>
           </div>
       </div>
   );
