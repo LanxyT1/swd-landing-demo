@@ -1,7 +1,7 @@
 // Components
 // import {SwdFactoryIcon} from "@/assets/icons";
 // Styles
-// import styles from "@/styles/Footer.module.scss"
+import styles from "@/styles/Footer.module.scss"
 
 // const Footer = () => {
     // const addressLink = "https://www.google.com/maps?q=1600+Turaides+st.+10,+Riga,+Latvia";
@@ -38,10 +38,22 @@
 
 const Footer = () => {
     return (
-      <footer>
-        <p>Footer</p>
+      <footer className={styles.footer}>
+          <div className={styles.section}></div>
+
+          <div className={styles.lineBreak}></div>
+
+          <div className={styles.section}>
+              <div className={styles.contactInfo}>
+                  <span>E-mail address</span>
+
+                  <a href="mailto:info@swdfactory.com">
+                      info@swdfactory.com
+                  </a>
+              </div>
+          </div>
       </footer>
     );
 };
-  
+
 export default Footer;
