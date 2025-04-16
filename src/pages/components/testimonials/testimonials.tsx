@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import Container from "@/components/container/container";
 import Button from "@/components/button/button";
 // Data
-import {testimonialList} from "./data/testimonal-list";
+import {testimonialList} from "@/data/testimonial/testimonal-list";
 // Icons
 import ArrowRightIcon from "@/assets/svgs/arrow-right-icon";
 // Styles

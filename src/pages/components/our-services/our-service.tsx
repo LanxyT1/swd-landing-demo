@@ -8,7 +8,7 @@ import {
     OPTION_DEFAULT,
     optionList,
     ourServiceList
-} from "./data/our-service-list";
+} from "@/data/our-service-list/our-service-list";
 // Styles
 import styles from "./OurServices.module.scss";
 
