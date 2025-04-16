@@ -1,11 +1,13 @@
-// Next Imports
+// Next
 import React from "react";
-// import Link from "next/link";
-// Components
-// import {PROJECT_HEALTH_LINKS} from "@/data/project-health-link";
-// import {PROJECT_OTHER_LINKS} from "@/data/project-other-link";
-// import {PROJECT_SOLAR_LINKS} from "@/data/project-solar-links";
-// import {PROJECT_TRANSPORTATION_LINKS} from "@/data/project-transport-link";
+import Link from "next/link";
+// Data
+import {
+    PROJECT_HEALTH_LINKS,
+    PROJECT_OTHER_LINKS,
+    PROJECT_SOLAR_LINKS,
+    PROJECT_TRANSPORTATION_LINKS
+} from "./data/project-link";
 // Icons
 import HealthIcon from "@/assets/svgs/health-icon";
 import SolarIcon from "@/assets/svgs/solar-icon";
@@ -15,16 +17,16 @@ import CustomBuildIcon from "@/assets/svgs/custom-build-icon";
 import styles from "@/components/header/header-projects-section/HeaderProjects.module.scss";
 
 const HeaderProjects = () => {
-    // const getProjectLinks = (links: readonly {[key: string]: string}[]) => {
-    //     return links.map((link, index) => {
-    //         return (
-    //             <Link key={index}
-    //                   className={styles.link}
-    //                   href={link.href}
-    //                   shallow>{link.title}</Link>
-    //         );
-    //     });
-    // };
+    const getProjectLinks = (links: readonly {[key: string]: string}[]) => {
+        return links.map((link, index) => {
+            return (
+                <Link key={index}
+                      className={styles.link}
+                      href={link.href}
+                      shallow>{link.title}</Link>
+            );
+        });
+    };
 
     return (
         <div className={styles.projectSectionWrapper}>
@@ -42,7 +44,7 @@ const HeaderProjects = () => {
                     </div>
 
                     <div className={styles.linkOptions}>
-                        {/*{getProjectLinks(PROJECT_HEALTH_LINKS)}*/}
+                        {getProjectLinks(PROJECT_HEALTH_LINKS)}
                     </div>
                 </div>
 
@@ -54,7 +56,7 @@ const HeaderProjects = () => {
                     </div>
 
                     <div className={styles.linkOptions}>
-                        {/*{getProjectLinks(PROJECT_SOLAR_LINKS)}*/}
+                        {getProjectLinks(PROJECT_SOLAR_LINKS)}
                     </div>
                 </div>
 
@@ -66,7 +68,7 @@ const HeaderProjects = () => {
                     </div>
 
                     <div className={styles.linkOptions}>
-                        {/*{getProjectLinks(PROJECT_TRANSPORTATION_LINKS)}*/}
+                        {getProjectLinks(PROJECT_TRANSPORTATION_LINKS)}
                     </div>
                 </div>
 
@@ -78,7 +80,7 @@ const HeaderProjects = () => {
                     </div>
 
                     <div className={styles.linkOptions}>
-                        {/*{getProjectLinks(PROJECT_OTHER_LINKS)}*/}
+                        {getProjectLinks(PROJECT_OTHER_LINKS)}
                     </div>
                 </div>
             </div>

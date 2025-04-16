@@ -44,12 +44,12 @@ const Header = () => {
                                  onClick={handleProjectsClick}>Projects</div>
                             <div className={styles.option}>Partners</div>
                             <div className={styles.option}>How we work</div>
-                        </div>
 
-                        <div className={styles.contactButton}
-                             onClick={() => window.location.href = "mailto:contact@example.com"}>
-                            <Button text="Contact us"
-                                       showForwardIcon={true}/>
+                            <div className={styles.contactButton}
+                                 onClick={() => window.location.href = "mailto:contact@example.com"}>
+                                <Button text="Contact us"
+                                        showForwardIcon={true}/>
+                            </div>
                         </div>
                     </div>
 
