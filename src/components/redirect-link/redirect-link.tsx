@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 // Components
-import {ArrowRightIcon} from "@/assets/icons";
+import ArrowRightIcon from "@/assets/svgs/arrow-right-icon";
 // Styles
 import styles from "@/components/redirect-link/RedicrectLink.module.scss";
 

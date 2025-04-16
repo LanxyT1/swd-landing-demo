@@ -8,7 +8,7 @@ import {testimonialList} from "./data/testimonal-list";
 // Icons
 import ArrowRightIcon from "@/assets/svgs/arrow-right-icon";
 // Styles
-import styles from "@/components/testimonials-section/TestimonialsSection.module.scss";
+import styles from "./Testimonials.module.scss";
 
 const TestimonialSection: React.FC = () => {
     const title = "Testimonials";

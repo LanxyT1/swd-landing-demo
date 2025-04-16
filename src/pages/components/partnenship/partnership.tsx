@@ -8,7 +8,7 @@ import CustomBuildIcon from "@/assets/svgs/custom-build-icon";
 import TeamsIcon from "@/assets/svgs/teams-icon";
 import BookIcon from "@/assets/svgs/book-icon";
 // Styles
-import styles from "@/components/partnenship-section/PartnershipSection.module.scss";
+import styles from "./Partnership.module.scss";
 
 const Partnership = () => {
   const title = "Types of Partnership and Engagement models";
