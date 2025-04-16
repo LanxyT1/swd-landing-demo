@@ -4,9 +4,9 @@ import React from "react";
 import Button from "@/components/button/button";
 import SwdFactoryIcon from "@/assets/svgs/swd-factory-logo";
 // Styles
-import styles from "./HeroSection.module.scss";
+import styles from "./Hero.module.scss";
 
-const HeroSection = () => {
+const Hero = () => {
   return (
       <div className={styles.heroSection}>
           <SwdFactoryIcon className="dark" />
@@ -31,4 +31,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default Hero;

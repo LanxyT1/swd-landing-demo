@@ -1,0 +1,59 @@
+@import "../../../styles/variables";
+
+$card-padding: calc($indent-max-plus + $padding-step) $indent-main;
+$margin-large: 60px;
+
+.section {
+  .cardsWrapper {
+    .partnershipWrapper {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: $indent-main;
+      margin: $indent-max-plus 0;
+
+      .card {
+        min-width: 100%;
+        border-radius: $border-radius-medium;
+        background-color: #FFFFFF;
+        padding: $card-padding;
+        box-sizing: border-box;
+
+        .icon {
+          margin-bottom: $indent-main;
+        }
+
+        .cardTitle {
+          min-height: 65px;
+          height: fit-content;
+          font-weight: 600;
+          font-size: 24px;
+          margin-bottom: $indent-max-plus;
+        }
+
+        .cardInfo {
+          line-height: 32px;
+        }
+
+        .additionalInfo {
+          line-height: 32px;
+          margin: 0 auto;
+          text-align: center;
+          max-width: 70%;
+        }
+
+        &:last-child {
+          border-color: red;
+          grid-column: span 3;
+        }
+      }
+    }
+  }
+
+  .redirectText {
+    margin-top: $margin-large;
+
+    a {
+      justify-content: center;
+    }
+  }
+}

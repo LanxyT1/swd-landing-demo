@@ -1,0 +1,66 @@
+@import "../../../styles/variables";
+
+$margin-large: 60px;
+$card-padding: $margin-large $indent-max-plus;
+
+.section {
+  .ourServicesWrapper {
+    margin: $indent-max auto;
+
+    .optionList {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: $indent-midi;
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto $margin-large;
+
+      .optionWrapper {
+        width: 100%;
+
+        button {
+          justify-content: center;
+        }
+      }
+    }
+
+    .optionInfoWrapper {
+      display: flex;
+
+      .optionDescriptionSection {
+        padding: $card-padding;
+        background-color: #fff;
+        border-radius: $border-radius-medium;
+        width: 80%;
+        margin: auto;
+
+        .title {
+          font-size: 24px;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .secondaryText {
+          max-width: 650px;
+          margin: 0 auto;
+          line-height: 32px;
+          text-align: center;
+        }
+
+        .divider {
+          margin: $indent-max auto;
+          border-bottom: 2px solid rgba($swd-primary-text-color, 0.2);
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  .redirectText {
+    margin-top: $margin-large;
+
+    a {
+      justify-content: center;
+    }
+  }
+}

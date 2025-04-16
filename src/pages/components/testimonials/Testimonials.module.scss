@@ -1,0 +1,129 @@
+@import "../../../styles/variables";
+
+$card-padding: calc($indent-max-plus + $padding-step);
+
+.section {
+  margin-top: $indent-max-plus;
+
+  .dotsWrapper {
+    display: flex;
+    justify-content: center;
+    gap: $indent-mini;
+    margin-bottom: $indent-main;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba($swd-primary-text-color, .12);
+      transition: $transition-animate;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($swd-primary-text-color, .24);
+      }
+
+      &.activeDot {
+        background-color: $swd-primary-color;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  .cardsWrapper {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: $indent-max-plus;
+
+    .previousButton,
+    .nextButton {
+      fill: $swd-primary-color;
+    }
+
+    .previousButton {
+      transform: rotate(180deg);
+    }
+
+    .card {
+      max-width: 70%;
+      margin: auto;
+      border-radius: $border-radius-medium;
+      background-color: #FFFFFF;
+      padding: $card-padding;
+      box-sizing: border-box;
+      text-align: center;
+      animation-duration: 0.5s;
+      animation-timing-function: ease;
+
+      &.fadeInNext {
+        animation-name: fadeInNext;
+      }
+
+      &.fadeInPrev {
+        animation-name: fadeInPrev;
+      }
+
+      .companyName {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: $indent-main;
+      }
+
+      .comment {
+        line-height: 32px;
+        margin-bottom: $indent-max-plus;
+
+        .quote {
+          font-size: 24px;
+          font-weight: 600;
+          color: $swd-primary-color;
+        }
+      }
+
+      .customerName {
+        font-weight: 600;
+        margin-bottom: $indent-mini;
+      }
+
+      .position {
+        font-size: 14px;
+        color: #989898;
+      }
+    }
+  }
+
+  .banner {
+    max-width: 70%;
+    margin: auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $indent-main;
+    background-color: #FFFFFF;
+    border-radius: $border-radius-large;
+    box-sizing: border-box;
+  }
+
+  @keyframes fadeInNext {
+    from {
+      opacity: 0;
+      transform: translateX(10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInPrev {
+    from {
+      opacity: 0;
+      transform: translateX(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

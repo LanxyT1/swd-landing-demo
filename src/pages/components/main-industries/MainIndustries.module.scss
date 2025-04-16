@@ -1,0 +1,49 @@
+@import "../../../styles/variables";
+
+$card-padding: calc($indent-max-plus + $padding-step) $indent-main;
+$margin-large: 60px;
+
+.section {
+  .mainIndustriesWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: $indent-main;
+    margin-top: $indent-max-plus;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      border-radius: $border-radius-medium;
+      padding: $card-padding;
+      background-color: #FFFFFF;
+      box-sizing: border-box;
+
+      .icon {
+        margin-bottom: $indent-main;
+      }
+
+      .cardTitle {
+        min-height: 65px;
+        height: fit-content;
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: $indent-max-plus;
+      }
+
+      .cardInfo {
+        line-height: 32px;
+        margin-bottom: $indent-max-plus;
+      }
+    }
+  }
+
+  .redirectText {
+    margin-top: $margin-large;
+
+    a {
+      justify-content: center;
+    }
+  }
+}

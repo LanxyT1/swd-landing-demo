@@ -1,0 +1,77 @@
+@import "../../styles/variables";
+
+.redirectWrapper {
+  text-decoration: none;
+
+  .redirectFilledContainer {
+    display: flex;
+    align-items: center;
+    border-radius: $border-radius-large;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background-color: $swd-primary-color;
+    transition: $transition-animate;
+    max-width: fit-content;
+
+    &:hover {
+      border-color: transparent;
+      width: 100%;
+      border-radius: $border-radius-small;
+
+      .title {
+        opacity: 1;
+        color: #FFFFFF;
+        transform: translateX(0);
+      }
+
+      .circle {
+        left: calc(100% - 48px);
+      }
+    }
+
+    .title {
+      margin-left: $indent-midi-plus;
+      margin-right: calc($indent-max + $indent-midi);
+      transform: translateX(-12px);
+      opacity: 0;
+      transition: inherit;
+    }
+
+    .circle {
+      min-width: 40px;
+      min-height: 40px;
+      border-radius: 50%;
+      background-color: $swd-primary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: inherit;
+      position: absolute;
+      left: 0;
+
+      .learnMoreIcon {
+        fill: #FFFFFF;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .redirectContainer {
+    display: flex;
+    align-items: center;
+
+    .title {
+      font-weight: 600;
+      color: $swd-primary-color;
+    }
+
+    .learnMoreIcon {
+      fill: $swd-primary-color;
+      width: 16px;
+      height: 16px;
+      margin-left: $indent-mini;
+    }
+  }
+}
