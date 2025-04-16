@@ -5,7 +5,7 @@ import {useRouter} from "next/router";
 // Components
 // import {SwdFactoryIcon} from "@/assets/icons";
 // Styles
-import styles from "@/styles/Header.module.scss"
+import styles from "@/components/header/Header.module.scss"
 
 const Header = () => {
     const [isProjectSelected, setIsProjectSelected] = React.useState(false);

@@ -1,7 +1,7 @@
 // Components
 // import {SwdFactoryIcon} from "@/assets/icons";
 // Styles
-import styles from "@/styles/Footer.module.scss"
+import styles from "@/components/footer/Footer.module.scss"
 
 const Footer = () => {
     const addressLink = "https://www.google.com/maps?q=1600+Turaides+st.+10,+Riga,+Latvia";

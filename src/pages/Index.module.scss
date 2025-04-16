@@ -1,0 +1,33 @@
+@import "../styles/variables";
+
+$gap-margin: 150px;
+
+.wrapper {
+  background: $background-color;
+  border-bottom-right-radius: $border-radius-large;
+  border-bottom-left-radius: $border-radius-large;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-margin;
+  position: relative;
+  overflow: hidden;
+
+  .section {
+    width: 100%;
+    margin: 0 auto;
+
+    &:last-child {
+      margin-bottom: $container-section-margin;
+    }
+  }
+
+  .flow {
+    width: 120%;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.6;
+    top: -40%;
+    left: -10%;
+    height: 100%;
+  }
+}
