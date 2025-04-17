@@ -14,7 +14,7 @@ import styles from "@/components/industry-template/IndustryTemplate.module.scss"
 
 export default function SolarEnergy() {
     return (
-        <IndustryTemplate heroTitle="Health Science & Bio Informatics"
+        <IndustryTemplate heroTitle="Solar energy"
                           heroIcon={<SolarIcon className={styles.icon} />}
                           heroLargeIcon={<SolarBlur className={styles.backgroundIcon} />}
                           heroBlob={<BlobBlur className={`${styles.blobBlur} solar-blob`} />}

@@ -14,7 +14,7 @@ import styles from "@/components/industry-template/IndustryTemplate.module.scss"
 
 export default function TransportLogistics() {
     return (
-        <IndustryTemplate heroTitle="Health Science & Bio Informatics"
+        <IndustryTemplate heroTitle="Transportation & Logistics"
                           heroIcon={<TransportIcon className={styles.icon} />}
                           heroLargeIcon={<TransportBlur className={styles.backgroundIcon} />}
                           heroBlob={<BlobBlur className={`${styles.blobBlur} transport-blob`} />}
