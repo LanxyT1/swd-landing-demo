@@ -75,8 +75,8 @@ $gap-margin: 150px;
         .itemList {
           .item {
             margin: $padding-step;
-            background-color: rgba($swd-primary-color, 0.06);
-            border-radius: $border-radius-small;
+            background-color: $background-dark-color;
+            border-radius: $border-radius-large;
             padding: $padding-step $indent-mini-plus;
             box-sizing: border-box;
             display: inline-block;

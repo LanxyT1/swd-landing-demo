@@ -8,7 +8,7 @@ $large-margin: 60px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: calc($container-section-margin * 1.5) 0 $indent-max-plus;
+  margin: calc($container-section-margin * 1.5) 0 calc($indent-main-double * 2);
   overflow: hidden;
   position: relative;
 
@@ -17,7 +17,9 @@ $large-margin: 60px;
     text-align: center;
 
     .titleRow {
+      margin: 0;
       font-size: 40px;
+      font-weight: 500;
 
       &:nth-child(2) {
         color: $swd-primary-color;

@@ -16,7 +16,7 @@ const Container: React.FC<ContainerProps> = ({title, secondaryText = false, chil
 
     return (
         <div className={styles.containerWrapper}>
-            <span className={styles.title}>{title}</span>
+            {title && <span className={styles.title}>{title}</span>}
             {secondaryTextHtml}
             {children}
         </div>

@@ -7,16 +7,18 @@ $indent-mini-plus: $indent-mini + $padding-step;
 $indent-midi-plus: $indent-midi + $padding-step;
 $indent-main-plus: $indent-main + $padding-step;
 $indent-max-plus: $indent-max + $padding-step;
+$indent-main-double: $indent-main * 2;
 
 $swd-primary-color: #2B465A;
 $swd-primary-color-hover: #192A37;
 
-$swd-primary-text-color: #333333;
+$swd-primary-text-color: rgba(#1B1B1B, 0.87);
 
 $swd-border-color: rgba($swd-primary-text-color, 0.24);
 $swd-border: 1px solid $swd-border-color;
 
 $background-color: #FAF8F7;
+$background-dark-color: #E9DDD5;
 $box-shadow: 0 15px 22px 3px rgba(90, 70, 43, 0.1);
 
 $border-radius-small: 10px;
@@ -27,4 +29,4 @@ $transition-animate: all 0.3s ease-in-out;
 
 $header-height: 78px;
 $container-section-margin: 100px;
-$content-max-width: 1200px;
+$content-max-width: 1500px;

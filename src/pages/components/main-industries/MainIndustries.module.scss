@@ -8,7 +8,7 @@ $margin-large: 60px;
     display: flex;
     flex-direction: row;
     gap: $indent-main;
-    margin-top: $indent-max-plus;
+    margin-top: $indent-main-double;
 
     .card {
       display: flex;
