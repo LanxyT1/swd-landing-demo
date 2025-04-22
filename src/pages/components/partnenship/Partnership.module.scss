@@ -9,7 +9,7 @@ $margin-large: 60px;
       display: grid;
       grid-template-columns: auto auto auto;
       gap: $indent-main;
-      margin: $indent-main-double 0;
+      margin: $indent-max-plus 0;
 
       .card {
         min-width: 100%;

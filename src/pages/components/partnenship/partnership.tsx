@@ -82,7 +82,7 @@ const Partnership = () => {
           </div>
 
           <div className={styles.redirectText}>
-            <RedirectLink link="/transport-logistics"
+            <RedirectLink link="/how-we-work"
                           filled={false}
                           title="Learn more about on how we work" />
           </div>

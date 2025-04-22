@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+
+$gap-margin: 150px;
+
+.wrapper {
+  background: $background-color;
+  border-bottom-right-radius: $border-radius-large;
+  border-bottom-left-radius: $border-radius-large;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-margin;
+  position: relative;
+  overflow: hidden;
+
+  .section {
+    width: 100%;
+    margin: $indent-main-double 0 auto;
+
+    &:last-child {
+      margin-bottom: $container-section-margin;
+    }
+
+    .cardsWrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: $indent-main;
+      margin: $indent-main-double 0;
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 100%;
+        border-radius: $border-radius-medium;
+        background-color: #FFFFFF;
+        padding: $indent-main;
+        box-sizing: border-box;
+        text-align: center;
+        min-height: 170px;
+        cursor: pointer;
+        transition: $transition-animate;
+
+        &:hover {
+          border-radius: $border-radius-small;
+
+          .logo {
+            transform: scale(.9);
+          }
+        }
+
+        .logo {
+          width: 200px;
+          height: auto;
+          transform: scale(1);
+          transition: $transition-animate;
+        }
+      }
+    }
+  }
+}

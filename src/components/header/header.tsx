@@ -8,7 +8,7 @@ import HeaderProjectsSection from "@/components/header/header-projects-section/h
 // Icons
 import SwdFactoryLogo from "@/assets/svgs/swd-factory-logo";
 // Styles
-import styles from "@/components/header/Header.module.scss"
+import styles from "@/components/header/Header.module.scss";
 
 const Header = () => {
     const [isProjectSelected, setIsProjectSelected] = React.useState(false);
@@ -30,8 +30,7 @@ const Header = () => {
         };
     }, [router]);
 
-    return (
-        <div className={styles.headerWrapper}>
+    return (<div className={styles.headerWrapper}>
             <header className={styles.header}>
                 <div className={`${styles.headerContainer} ${isProjectSelected && styles.expandedHeader}`}>
                     <div className={styles.topSection}>
@@ -41,9 +40,12 @@ const Header = () => {
 
                         <div className={styles.headerActions}>
                             <div className={`${styles.option} ${isProjectSelected && styles.selectedOption}`}
-                                 onClick={handleProjectsClick}>Projects</div>
-                            <div className={styles.option}>Partners</div>
-                            <div className={styles.option}>How we work</div>
+                                 onClick={handleProjectsClick}>Projects
+                            </div>
+                            <div className={styles.option}
+                                 onClick={() => router.push("/partners")}>Partners</div>
+                            <div className={styles.option}
+                                 onClick={() => router.push("/how-we-work")}>How we work</div>
 
                             <div className={styles.contactButton}
                                  onClick={() => window.location.href = "mailto:info@swdfactory.com"}>
@@ -54,7 +56,7 @@ const Header = () => {
                     </div>
 
                     <div className={`${styles.projectSectionWrapper} ${isProjectSelected && styles.opened}`}>
-                        <HeaderProjectsSection />
+                        <HeaderProjectsSection/>
                     </div>
                 </div>
             </header>
@@ -63,8 +65,7 @@ const Header = () => {
 
             <div className={`${styles.headerBackdrop} ${isProjectSelected && styles.opened}`}
                  onClick={handleProjectsClick}></div>
-        </div>
-    );
+        </div>);
 };
 
 export default Header;

@@ -15,7 +15,36 @@ $gap-margin: 150px;
   .section {
     width: 100%;
     margin: 0 auto;
-    margin-top: $container-section-margin;
+    max-width: $content-max-width;
+
+    &:first-child {
+      margin-top: $indent-main-double;
+    }
+
+    &.rowSection {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: $indent-main-double;
+
+      .textWrapper {
+        max-width: 50%;
+      }
+    }
+
+    .sectionTitle {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: $indent-main;
+    }
+
+    .sectionDescription {
+      line-height: 32px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
 
     &:last-child {
       margin-bottom: $container-section-margin;
@@ -25,36 +54,17 @@ $gap-margin: 150px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: $indent-main;
-      margin: $indent-main-double 0;
 
       .card {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         min-width: 100%;
-        border-radius: $border-radius-medium;
-        background-color: #FFFFFF;
-        padding: $indent-main;
         box-sizing: border-box;
-        text-align: center;
-        min-height: 170px;
-        cursor: pointer;
-        transition: $transition-animate;
 
-        &:hover {
-          border-radius: $border-radius-small;
-
-          .logo {
-            transform: scale(.9);
+        ul {
+          li {
+            margin-bottom: $indent-mini;
           }
-        }
-
-        .logo {
-          width: 200px;
-          height: auto;
-          transform: scale(1);
-          transition: $transition-animate;
         }
       }
     }

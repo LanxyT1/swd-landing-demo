@@ -3,7 +3,7 @@ import Container from "@/components/container/container";
 // Data
 import {partnerList} from "@/data/partners/partner-list";
 // Styles
-import styles from "@/pages/parnters/Index.module.scss";
+import styles from "@/pages/partners/Index.module.scss";
 import Image from "next/image";
 
 export default function Partners() {
