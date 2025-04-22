@@ -64,7 +64,7 @@ const OurService = () => {
                 </div>
 
                 <div className={styles.redirectText}>
-                    <RedirectLink link="/transport-logistics"
+                    <RedirectLink link="/used-technologies"
                                   filled={false}
                                   title="Learn more about technologies we use" />
                 </div>

@@ -1,0 +1,89 @@
+@import "../../styles/variables";
+
+$gap-margin: 150px;
+
+.wrapper {
+  background: $background-color;
+  border-bottom-right-radius: $border-radius-large;
+  border-bottom-left-radius: $border-radius-large;
+  display: flex;
+  flex-direction: column;
+  gap: $gap-margin;
+  position: relative;
+  overflow: hidden;
+
+  .heroSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: calc($container-section-margin / 2) 0 0;
+    background-color: rgba($swd-primary-color, 0.06);
+    border-radius: $border-radius-medium;
+    padding: $indent-max-plus;
+    box-sizing: border-box;
+    gap: $indent-midi;
+    position: relative;
+    overflow: hidden;
+
+    .heroTitleSection {
+      font-size: 40px;
+    }
+
+    .heroDescription {
+      max-width: 70%;
+      line-height: 32px;
+    }
+  }
+
+  .section {
+    width: 100%;
+    margin-top: $container-section-margin;
+
+    &:last-child {
+      margin-bottom: $container-section-margin;
+    }
+
+    .technologiesWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: $indent-max-plus;
+      border-bottom: $swd-border;
+      padding-bottom: $indent-max-plus;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        width: 50%;
+      }
+
+      .languageList {
+        display: flex;
+        flex-direction: column;
+        gap: $indent-midi;
+        width: 50%;
+        line-height: 32px;
+
+        .itemList {
+          .item {
+            margin: $padding-step;
+            background-color: rgba($swd-primary-color, 0.06);
+            border-radius: $border-radius-small;
+            padding: $padding-step $indent-mini-plus;
+            box-sizing: border-box;
+            display: inline-block;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}

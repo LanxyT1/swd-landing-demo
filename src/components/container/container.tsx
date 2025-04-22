@@ -4,7 +4,7 @@ import React from "react";
 import styles from "@/components/container/Container.module.scss";
 
 interface ContainerProps {
-    title: string; // Container's title.
+    title?: string; // Container's title.
     secondaryText?: string; // Container's secondary text.
     children?: React.ReactNode; // Pass custom HTML content as children.
 }
