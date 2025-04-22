@@ -1,7 +1,7 @@
 // Config
 import config from "../../../next.config";
 
-const pathUrl = `${config.basePath}/flow.svg`
+const pathUrl = `${config.basePath}`
 export const partnerList = [
     {
         name: "SunPower",
