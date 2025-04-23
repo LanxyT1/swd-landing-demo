@@ -64,3 +64,43 @@ $card-padding: $margin-large $indent-max-plus;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .section {
+    .ourServicesWrapper {
+      margin: $indent-max auto;
+
+      .optionList {
+        grid-template-columns: repeat(2, auto);
+        gap: $indent-mini-plus;
+        margin: 0 auto $indent-max;
+      }
+
+      .optionInfoWrapper {
+        .optionDescriptionSection {
+          padding: $indent-max;
+          width: 100%;
+
+          .secondaryText {
+            max-width: 100%;
+            line-height: 28px;
+          }
+
+          .title {
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+          }
+
+          .divider {
+            margin: $indent-midi auto;
+          }
+        }
+      }
+    }
+
+    .redirectText {
+      margin-top: 0;
+    }
+  }
+}

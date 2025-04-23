@@ -51,3 +51,23 @@ $margin-large: 60px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   }
 }
+
+@media (max-width: 768px) {
+  .footer {
+    margin: $indent-main-double auto;
+    padding: 0 $indent-main;
+
+    .section {
+      display: grid;
+
+      .rowSection {
+        align-items: flex-start;
+        margin-bottom: $indent-main;
+      }
+    }
+
+    .lineBreak {
+      margin: $indent-max 0;
+    }
+  }
+}

@@ -57,3 +57,38 @@ $margin-large: 60px;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .section {
+    .cardsWrapper {
+      .partnershipWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $indent-midi;
+
+        .card {
+          padding: $indent-max $indent-main;
+
+          .icon {
+            margin-bottom: $indent-midi;
+          }
+
+          .cardTitle {
+            min-height: auto;
+            font-size: 20px;
+            margin-bottom: $indent-midi;
+          }
+
+          .additionalInfo {
+            max-width: 100%;
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .redirectText {
+      margin-top: 0;
+    }
+  }
+}

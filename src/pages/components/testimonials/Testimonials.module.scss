@@ -8,8 +8,30 @@ $card-padding: calc($indent-max-plus + $padding-step);
   .dotsWrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: $indent-mini;
     margin-bottom: $indent-main;
+
+    .previousButton,
+    .nextButton {
+      fill: $swd-primary-color;
+    }
+
+    .previousButton {
+      transform: rotate(180deg);
+    }
+
+    &:first-child {
+      .button {
+        margin-right: 8px;
+      }
+    }
+
+    &:not(:last-child) {
+      .button {
+        margin-left: 8px;
+      }
+    }
 
     .dot {
       width: 10px;
@@ -34,15 +56,6 @@ $card-padding: calc($indent-max-plus + $padding-step);
     display: flex;
     flex-direction: row;
     margin-bottom: $indent-max-plus;
-
-    .previousButton,
-    .nextButton {
-      fill: $swd-primary-color;
-    }
-
-    .previousButton {
-      transform: rotate(180deg);
-    }
 
     .card {
       max-width: 70%;
@@ -124,6 +137,31 @@ $card-padding: calc($indent-max-plus + $padding-step);
     to {
       opacity: 1;
       transform: translateX(0);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    .dotsWrapper {
+      .dot {
+        width: 8px;
+        height: 8px;
+      }
+    }
+    .cardsWrapper {
+      .card {
+        max-width: 100%;
+        padding: $indent-max $indent-main;
+      }
+    }
+    .banner {
+      height: 100%;
+      max-width: 100%;
+      align-items: center;
+      padding: 24px;
+      flex-direction: column;
+      gap: 12px;
     }
   }
 }

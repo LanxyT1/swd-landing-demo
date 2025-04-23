@@ -41,20 +41,26 @@ const TestimonialSection: React.FC = () => {
         <Container title={title} secondaryText={secondaryText}>
             <div className={styles.section}>
                 <div className={styles.dotsWrapper}>
-                    {testimonialList.map((_, index) => (
-                        <div
-                            key={index}
-                            className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ''}`}
-                            onClick={() => handleDotClick(index)}/>
-                    ))}
-                </div>
-                <div className={styles.cardsWrapper}>
                     <div className={styles.button} onClick={handlePrev}>
                         <Button isPrimary={false}>
                             <ArrowRightIcon className={styles.previousButton}/>
                         </Button>
                     </div>
 
+                    {testimonialList.map((_, index) => (
+                        <div
+                            key={index}
+                            className={`${styles.dot} ${index === currentIndex ? styles.activeDot : ''}`}
+                            onClick={() => handleDotClick(index)}/>
+                    ))}
+
+                    <div className={styles.button} onClick={handleNext}>
+                        <Button isPrimary={false}>
+                            <ArrowRightIcon className={styles.nextButton}/>
+                        </Button>
+                    </div>
+                </div>
+                <div className={styles.cardsWrapper}>
                     <div className={`${styles.card} ${animationType}`}>
                         <div className={styles.companyName}>
                             {currentTestimonial.companyName}
@@ -68,12 +74,6 @@ const TestimonialSection: React.FC = () => {
                             {currentTestimonial.customerName}
                         </div>
                         <div className={styles.position}>{currentTestimonial.position}</div>
-                    </div>
-
-                    <div className={styles.button} onClick={handleNext}>
-                        <Button isPrimary={false}>
-                            <ArrowRightIcon className={styles.nextButton}/>
-                        </Button>
                     </div>
                 </div>
 

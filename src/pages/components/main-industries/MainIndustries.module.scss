@@ -8,7 +8,7 @@ $margin-large: 60px;
     display: flex;
     flex-direction: row;
     gap: $indent-main;
-    margin-top: $indent-main-double;
+    margin: $indent-main-double auto;
 
     .card {
       display: flex;
@@ -44,6 +44,39 @@ $margin-large: 60px;
 
     a {
       justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    .mainIndustriesWrapper {
+      flex-direction: column;
+      gap: $indent-midi;
+      margin: $indent-max auto;
+
+      .card {
+        padding: $indent-max $indent-main;
+
+        .icon {
+          margin-bottom: $indent-midi;
+        }
+
+        .cardTitle {
+          min-height: auto;
+          font-size: 20px;
+          margin-bottom: $indent-midi;
+        }
+
+        .cardInfo {
+          line-height: 28px;
+          margin-bottom: $indent-max;
+        }
+      }
+    }
+
+    .redirectText {
+      margin-top: 0;
     }
   }
 }

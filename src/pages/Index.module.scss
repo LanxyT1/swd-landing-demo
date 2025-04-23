@@ -1,6 +1,7 @@
 @import "../styles/variables";
 
 $gap-margin: 150px;
+$gap-margin-mobile: 100px;
 
 .wrapper {
   background: $background-color;
@@ -29,5 +30,11 @@ $gap-margin: 150px;
     top: -40%;
     left: -10%;
     height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    gap: $gap-margin-mobile;
   }
 }

@@ -11,7 +11,7 @@ import BookIcon from "@/assets/svgs/book-icon";
 import styles from "./Partnership.module.scss";
 
 const Partnership = () => {
-  const title = "Types of Partnership and Engagement models";
+  const title = "Partnership & Engagement models";
   const secondaryText = "Flexible Partnership Models to Suit Your Needs.";
 
   return (

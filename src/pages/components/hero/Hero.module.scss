@@ -26,7 +26,7 @@ $large-margin: 60px;
         font-weight: 600;
       }
 
-      +.titleRow {
+      + .titleRow {
         margin-top: $indent-mini;
       }
     }
@@ -35,5 +35,15 @@ $large-margin: 60px;
   .heroActionSection {
     display: flex;
     gap: $indent-main;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    .heroTitleSection {
+      .titleRow {
+        font-size: 32px;
+      }
+    }
   }
 }
