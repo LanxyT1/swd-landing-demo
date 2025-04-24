@@ -47,3 +47,22 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .projectSectionWrapper {
+    .sectionDescription {
+      line-height: 28px;
+      max-width: 100%;
+      margin-bottom: $indent-mini;
+    }
+
+    .cardsWrapper {
+      width: 100%;
+      overflow: auto;
+
+      .card {
+        min-width: 220px;
+      }
+    }
+  }
+}

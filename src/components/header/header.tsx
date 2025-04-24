@@ -7,20 +7,31 @@ import Button from "@/components/button/button";
 import HeaderProjectsSection from "@/components/header/header-projects-section/header-projects";
 // Icons
 import SwdFactoryLogo from "@/assets/svgs/swd-factory-logo";
+import MenuIcon from "@/assets/svgs/menu-icon";
 // Styles
 import styles from "@/components/header/Header.module.scss";
 
 const Header = () => {
     const [isProjectSelected, setIsProjectSelected] = React.useState(false);
+    const [isMenuSelected, setIsMenuSelected] = React.useState(false);
     const router = useRouter();
 
     const handleProjectsClick = () => {
         setIsProjectSelected((isProjectSelected) => !isProjectSelected);
     };
 
+    const handleMenuClick = () => {
+        setIsMenuSelected((isMenuSelected) => !isMenuSelected);
+
+        if (isMenuSelected) {
+            setIsProjectSelected(false);
+        }
+    };
+
     React.useEffect(() => {
         const handleRouteChange = () => {
             setIsProjectSelected(false);
+            setIsMenuSelected(false);
         };
 
         router.events.on("routeChangeStart", handleRouteChange);
@@ -39,7 +50,11 @@ const Header = () => {
                         </Link>
 
                         <div className={styles.headerMobileActions}>
-                            <div className={styles.option}>Menu</div>
+                            <div className={styles.option}>
+                                <div onClick={handleMenuClick}>
+                                    <MenuIcon />
+                                </div>
+                            </div>
                         </div>
 
                         <div className={styles.headerActions}>
@@ -59,6 +74,16 @@ const Header = () => {
                         </div>
                     </div>
 
+                    <div className={`${styles.menuOptions} ${isMenuSelected && styles.opened}`}>
+                        <div className={`${styles.option} ${isProjectSelected && styles.selectedOption}`}
+                             onClick={handleProjectsClick}>Projects
+                        </div>
+                        <div className={styles.option}
+                             onClick={() => router.push("/partners")}>Partners</div>
+                        <div className={styles.option}
+                             onClick={() => router.push("/how-we-work")}>How we work</div>
+                    </div>
+
                     <div className={`${styles.projectSectionWrapper} ${isProjectSelected && styles.opened}`}>
                         <HeaderProjectsSection/>
                     </div>
@@ -69,7 +94,8 @@ const Header = () => {
 
             <div className={`${styles.headerBackdrop} ${isProjectSelected && styles.opened}`}
                  onClick={handleProjectsClick}></div>
-        </div>);
+        </div>
+    );
 };
 
 export default Header;

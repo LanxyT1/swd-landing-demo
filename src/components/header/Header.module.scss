@@ -67,6 +67,43 @@
 
         .headerMobileActions {
           display: none;
+
+          .option {
+            padding: 0;
+          }
+        }
+      }
+
+      .menuOptions {
+        opacity: 0;
+        transform: translateY(-30px);
+        pointer-events: none;
+        max-height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: $indent-mini;
+        transition: $transition-animate;
+
+        &.opened {
+          opacity: 1;
+          transform: translateY(0px);
+          pointer-events: all;
+          margin-bottom: $indent-main;
+          max-height: 170px;
+        }
+
+        .option {
+          border: $swd-border;
+          border-radius: $border-radius-large;
+          padding: $indent-mini $indent-midi;
+          transition: $transition-animate;
+
+          &.selectedOption {
+            background: $swd-primary-color;
+            border-radius: $border-radius-small;
+            color: #FFFFFF;
+          }
         }
       }
 
@@ -124,6 +161,10 @@
         padding: 0 $indent-main;
         margin: 0;
 
+        &.expandedHeader {
+          border-radius: 0 0 $border-radius-medium $border-radius-medium;
+        }
+
         .topSection {
           margin: 0;
 
@@ -141,6 +182,12 @@
             pointer-events: all;
             height: 64px;
             font-size: 14px;
+          }
+        }
+
+        .projectSectionWrapper {
+          &.opened {
+            max-height: 650px;
           }
         }
       }
