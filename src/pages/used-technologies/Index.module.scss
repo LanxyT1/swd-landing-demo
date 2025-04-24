@@ -87,3 +87,58 @@ $gap-margin: 150px;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    .heroSection {
+      margin: 0;
+      padding: $indent-main;
+
+      .heroTitleSection {
+        font-size: 24px;
+      }
+
+      .heroDescription {
+        max-width: 100%;
+        line-height: 28px;
+      }
+    }
+
+    .section {
+      margin-top: $indent-main-double;
+
+      &:last-child {
+        margin-bottom: $indent-main-double;
+      }
+
+      .technologiesWrapper {
+        gap: $indent-main;
+        flex-direction: column;
+
+        .title {
+          font-size: 20px;
+          width: 100%;
+        }
+
+        .languageList {
+          width: 100%;
+
+          span {
+            line-height: 24px;
+          }
+
+          .itemList {
+            margin-top: $indent-mini;
+
+            .item {
+              padding: $indent-mini $indent-mini-plus;
+              border-radius: $border-radius-medium;
+              font-size: 14px;
+              line-height: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
