@@ -47,3 +47,11 @@
     fill: currentColor;
   }
 }
+
+@media (max-width: 768px) {
+  .swdButton.smallButton {
+    height: 100%;
+    font-size: 14px;
+    padding: $indent-mini $indent-main;
+  }
+}

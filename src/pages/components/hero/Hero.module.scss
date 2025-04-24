@@ -40,6 +40,8 @@ $large-margin: 60px;
 
 @media (max-width: 768px) {
   .heroSection {
+    margin: calc($indent-main-double * 2) 0 $indent-main-double;
+
     .heroTitleSection {
       .titleRow {
         font-size: 32px;

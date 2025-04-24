@@ -36,5 +36,12 @@ $gap-margin-mobile: 100px;
 @media (max-width: 768px) {
   .wrapper {
     gap: $gap-margin-mobile;
+
+    .flow {
+      width: 500%;
+      top: -44%;
+      left: -225%;
+      opacity: 0.8;
+    }
   }
 }

@@ -30,12 +30,16 @@
 
 @media (max-width: 768px) {
   .containerWrapper {
-    padding: 0 $indent-main;
+    padding: 0 $indent-midi;
+
+    .title {
+      margin: 0 auto $indent-midi auto;
+    }
 
     .secondaryText {
-      font-size: 24px;
+      font-size: 18px;
       max-width: 100%;
-      line-height: 36px;
+      line-height: 32px;
     }
   }
 }

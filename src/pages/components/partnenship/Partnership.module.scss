@@ -65,6 +65,7 @@ $margin-large: 60px;
         display: flex;
         flex-direction: column;
         gap: $indent-midi;
+        margin: $indent-main 0;
 
         .card {
           padding: $indent-max $indent-main;

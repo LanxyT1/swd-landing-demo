@@ -38,6 +38,10 @@ const Header = () => {
                             <SwdFactoryLogo className={`${styles.logoButton} dark`}/>
                         </Link>
 
+                        <div className={styles.headerMobileActions}>
+                            <div className={styles.option}>Menu</div>
+                        </div>
+
                         <div className={styles.headerActions}>
                             <div className={`${styles.option} ${isProjectSelected && styles.selectedOption}`}
                                  onClick={handleProjectsClick}>Projects

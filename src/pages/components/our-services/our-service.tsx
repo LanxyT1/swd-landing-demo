@@ -33,6 +33,7 @@ const OurService = () => {
                     text={ourServiceList[option].title}
                     isPrimary={isActiveOption}
                     isFocused={isActiveOption}
+                    smallButton={true}
                 />
             </div>
         );

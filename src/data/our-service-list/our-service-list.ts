@@ -16,7 +16,7 @@ export const ourServiceList: {[key: string]: { title: string, description: strin
             "UI/UX design, software architecture, coding, quality assurance, deployment, and support"
     },
     QA: {
-        title: "Quality Assurance (QA) Services",
+        title: "Quality Assurance",
         description: "Comprehensive QA services to ensure software reliability," +
             "performance, and compliance with industry standards"
     },
