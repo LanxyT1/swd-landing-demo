@@ -1,3 +1,5 @@
+// Next Imports
+import Link from "next/link";
 // Components
 import SwdFactoryLogo from "@/assets/svgs/swd-factory-logo";
 // Styles
@@ -9,7 +11,9 @@ const Footer = () => {
     return (
       <footer className={styles.footer}>
           <div className={styles.section}>
-              <SwdFactoryLogo className="light"/>
+              <Link href="/" shallow>
+                  <SwdFactoryLogo className={`${styles.logo} light`}/>
+              </Link>
           </div>
 
           <div className={styles.lineBreak}></div>

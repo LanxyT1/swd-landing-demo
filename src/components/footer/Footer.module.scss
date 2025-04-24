@@ -59,10 +59,15 @@ $margin-large: 60px;
 
     .section {
       display: grid;
+      font-size: 14px;
 
       .rowSection {
         align-items: flex-start;
-        margin-bottom: $indent-main;
+        margin-bottom: $indent-main-double;
+      }
+
+      .logo {
+        transform: scale(0.8) translateX(-16px);
       }
     }
 
