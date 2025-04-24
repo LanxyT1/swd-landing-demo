@@ -16,7 +16,8 @@ const Partnership = () => {
 
   return (
       <Container title={title}
-                 secondaryText={secondaryText}>
+                 secondaryText={secondaryText}
+                 emptyBackground={false}>
         <div className={styles.section}>
           <div className={styles.cardsWrapper}>
             <div className={styles.partnershipWrapper}>

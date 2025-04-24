@@ -40,7 +40,9 @@ const OurService = () => {
     };
 
     return (
-        <Container title={title} secondaryText={secondaryText}>
+        <Container title={title}
+                   secondaryText={secondaryText}
+                   emptyBackground={false}>
             <div className={styles.section}>
                 <div className={styles.ourServicesWrapper}>
                     <div className={styles.optionList}>

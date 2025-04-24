@@ -32,6 +32,14 @@
   .containerWrapper {
     padding: 0 $indent-midi;
 
+    &.backgroundContainer {
+      padding: $indent-main-double $indent-midi;
+      background: $background-dark-color;
+      margin: 0 $indent-mini;
+      width: calc(100% - $indent-midi);
+      border-radius: $border-radius-large;
+    }
+
     .title {
       margin: 0 auto $indent-midi auto;
       font-size: 12px !important;
@@ -40,7 +48,7 @@
     }
 
     .secondaryText {
-      font-size: 20px;
+      font-size: 24px;
       max-width: 100%;
       line-height: 32px;
     }
