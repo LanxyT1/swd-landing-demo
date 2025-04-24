@@ -6,7 +6,7 @@ export const testimonialList: Testimonial[] = [
         comment: "SWD Factory has been part of our Global Team, providing services for NanoString Technologies since July 2019. " +
             "During this time, SWD Factory has established itself as a stable and reliable partner with efficient, flexible and " +
             "customer-oriented approach.",
-        customerName: "Jane Doe",
+        customerName: "Peter Askovich",
         position: "Chief Executive Officer / Seattle Biosoftware, Inc., 🇺🇸"
     },
     {
