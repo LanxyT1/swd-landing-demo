@@ -112,11 +112,11 @@ $gap-margin: 150px;
       }
 
       .technologiesWrapper {
-        gap: $indent-main;
+        gap: $indent-max;
         flex-direction: column;
 
         .title {
-          font-size: 20px;
+          font-size: 24px;
           width: 100%;
         }
 
