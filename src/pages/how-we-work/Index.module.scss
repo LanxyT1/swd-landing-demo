@@ -1,6 +1,7 @@
 @import "../../styles/variables";
 
 $gap-margin: 150px;
+$gap-margin-mobile: 100px;
 
 .wrapper {
   background: $background-color;
@@ -26,6 +27,14 @@ $gap-margin: 150px;
       flex-direction: row;
       align-items: center;
       gap: $indent-main-double;
+
+      .desktop {
+        display: block;
+      }
+
+      .mobile {
+        display: none;
+      }
 
       .textWrapper {
         max-width: 50%;
@@ -64,6 +73,67 @@ $gap-margin: 150px;
         ul {
           li {
             margin-bottom: $indent-mini;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 $indent-midi;
+    gap: $indent-main-double;
+
+    .section {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &.rowSection {
+        .desktop {
+          display: none;
+        }
+
+        .mobile {
+          display: block;
+          transform: scale(0.6);
+        }
+
+        .textWrapper {
+          max-width: 100%;
+        }
+      }
+
+      .sectionTitle {
+        font-size: 24px;
+      }
+
+      .sectionDescription {
+        line-height: 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cardsWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $indent-mini-plus;
+
+        .card {
+          .cardHeader {
+            transform: scale(0.6) translateX(-80px);
+          }
+
+          ul {
+            margin: 0;
+
+            li {
+              font-size: 14px;
+              margin-bottom: $indent-mini;
+            }
           }
         }
       }

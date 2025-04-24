@@ -18,7 +18,7 @@ export default function HowWeWork() {
 
                 <div className={styles.cardsWrapper}>
                     <div className={styles.card}>
-                        <Proposal/>
+                        <Proposal className={styles.cardHeader} />
 
                         <ul>
                             <li>Gather initial information about the project</li>
@@ -27,7 +27,7 @@ export default function HowWeWork() {
                     </div>
 
                     <div className={styles.card}>
-                        <Agreement/>
+                        <Agreement className={styles.cardHeader} />
 
                         <ul>
                             <li>NDA</li>
@@ -37,7 +37,7 @@ export default function HowWeWork() {
                     </div>
 
                     <div className={styles.card}>
-                        <Development/>
+                        <Development className={styles.cardHeader} />
 
                         <ul>
                             <li>Planning</li>
@@ -48,7 +48,7 @@ export default function HowWeWork() {
                     </div>
 
                     <div className={styles.card}>
-                        <Support/>
+                        <Support className={styles.cardHeader} />
 
                         <ul>
                             <li>Maintenance</li>
@@ -73,7 +73,7 @@ export default function HowWeWork() {
             </div>
 
             <div className={`${styles.section} ${styles.rowSection}`}>
-                <Agile/>
+                <Agile className={styles.desktop} />
 
                 <div className={styles.textWrapper}>
                     <div className={styles.sectionTitle}>
@@ -86,6 +86,8 @@ export default function HowWeWork() {
                         appropriate when the goals of projects are not clearly defined.
                         Agile is regarded as the better option for smaller projects where
                         changes are likely to be made during the development process.
+
+                        <Agile className={styles.mobile} />
 
                         <ul>
                             <li>Promotes experimental software design</li>
@@ -108,6 +110,8 @@ export default function HowWeWork() {
                         Waterfall tends to be best for static projects, where it’s not
                         likely that many changes will be made throughout the development process.
 
+                        <Waterfall className={styles.mobile} />
+
                         <ul>
                             <li>Time and budget estimates are more reliable</li>
                             <li>Development processes tend to be more secure</li>
@@ -115,7 +119,7 @@ export default function HowWeWork() {
                     </div>
                 </div>
 
-                <Waterfall/>
+                <Waterfall className={styles.desktop} />
             </div>
         </div>
     );
