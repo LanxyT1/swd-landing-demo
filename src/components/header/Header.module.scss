@@ -117,11 +117,12 @@
 @media (max-width: 768px) {
   .headerWrapper {
     .header {
-      top: $indent-mini-plus;
+      top: 0;
 
       .headerContainer {
+        border-radius: 0 0 $border-radius-medium $border-radius-medium;
         padding: 0 $indent-main;
-        margin: 0 $indent-mini;
+        margin: 0;
 
         .topSection {
           margin: 0;
