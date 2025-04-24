@@ -158,7 +158,7 @@
       .headerContainer {
         border-radius: 0 0 $border-radius-medium $border-radius-medium;
         padding: 0 $indent-main;
-        margin: 0;
+        margin: 0 $indent-mini;
 
         &.expandedHeader {
           border-radius: 0 0 $border-radius-medium $border-radius-medium;
