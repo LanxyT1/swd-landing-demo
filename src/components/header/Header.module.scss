@@ -81,9 +81,9 @@
         max-height: 0;
         overflow: hidden;
         display: flex;
-        flex-direction: column;
         gap: $indent-mini;
         transition: $transition-animate;
+        justify-content: center;
 
         &.opened {
           opacity: 1;
@@ -94,7 +94,6 @@
         }
 
         .option {
-          border: $swd-border;
           border-radius: $border-radius-large;
           padding: $indent-mini $indent-midi;
           transition: $transition-animate;
