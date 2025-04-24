@@ -109,7 +109,10 @@ const IndustryTemplate: React.FC<IndustrySectionProps> = (
                         {heroTitle}
                     </div>
 
-                    {heroLargeIcon}
+                    <div className={styles.largeIcon}>
+                        {heroLargeIcon}
+                    </div>
+
                     {heroBlob}
                 </div>
             </div>
