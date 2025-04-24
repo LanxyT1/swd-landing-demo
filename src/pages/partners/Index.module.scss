@@ -16,13 +16,28 @@ $gap-margin: 150px;
     width: 100%;
     margin: $indent-main-double 0 auto;
 
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: $indent-main;
+      margin-top: $container-section-margin;
+      text-align: center;
+    }
+
+    .description {
+      line-height: 32px;
+      max-width: 70%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
     &:last-child {
       margin-bottom: $container-section-margin;
     }
 
     .cardsWrapper {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: $indent-main;
       margin: $indent-main-double 0;
 
@@ -38,22 +53,42 @@ $gap-margin: 150px;
         box-sizing: border-box;
         text-align: center;
         min-height: 170px;
-        cursor: pointer;
-        transition: $transition-animate;
 
-        &:hover {
-          border-radius: $border-radius-small;
-
-          .logo {
-            transform: scale(.9);
-          }
-        }
-
-        .logo {
-          width: 200px;
-          height: auto;
-          transform: scale(1);
+        .content {
           transition: $transition-animate;
+          height: 100%;
+
+          .logoWrapper {
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .logo {
+              width: 200px;
+              height: auto;
+              transform: scale(1);
+
+              &.smallIcon {
+                width: 100px;
+              }
+            }
+          }
+
+          .description {
+            max-width: 100%;
+            line-height: 32px;
+            margin: 0;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: $indent-midi;
+
+            a {
+              color: $swd-primary-color;
+              font-weight: 600;
+            }
+          }
         }
       }
     }
@@ -65,17 +100,35 @@ $gap-margin: 150px;
     .section {
       margin: $indent-main 0 auto;
 
+      .rowSection {
+        padding: $indent-mini-plus;
+        border-radius: $border-radius-medium;
+        background-color: $background-dark-color;
+        margin: $indent-max-plus 0;
+
+        &:last-child {
+          margin-top: 0;
+        }
+      }
+
       &:last-child {
         margin-bottom: $indent-main;
       }
 
       .cardsWrapper {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: $indent-midi;
+        margin: $indent-main 0 0;
 
         .card {
           .logo {
             transform: scale(0.7);
+          }
+
+          .content {
+            .description {
+              line-height: 28px;
+            }
           }
 
           &:hover {
@@ -86,6 +139,17 @@ $gap-margin: 150px;
             }
           }
         }
+      }
+
+      .title {
+        font-size: 20px;
+        margin-top: $indent-max;
+        margin-bottom: $indent-midi;
+      }
+
+      .description {
+        max-width: 100%;
+        line-height: 28px;
       }
     }
   }
