@@ -106,8 +106,8 @@ const Header = () => {
 
             <div className={styles.headerFader}></div>
 
-            <div className={`${styles.headerBackdrop} ${isProjectSelected && styles.opened}`}
-                 onClick={handleProjectsClick}></div>
+            <div className={`${styles.headerBackdrop} ${isMenuSelected && styles.opened}`}
+                 onClick={handleMenuClick}></div>
         </div>);
 };
 
