@@ -17,7 +17,14 @@ const Header = () => {
     const router = useRouter();
 
     const handleProjectsClick = () => {
-        setIsProjectSelected((isProjectSelected) => !isProjectSelected);
+        setIsProjectSelected((isProjectSelected) => {
+            if (!isProjectSelected) {
+                document.body.style.overflow = "hidden";
+            } else {
+                document.body.style.overflow = "unset";
+            }
+            return !isProjectSelected;
+        });
     };
 
     const handleMenuClick = () => {
@@ -25,6 +32,7 @@ const Header = () => {
 
         if (isMenuSelected) {
             setIsProjectSelected(false);
+            document.body.style.overflow = "unset";
         }
     };
 
@@ -32,12 +40,14 @@ const Header = () => {
         const handleRouteChange = () => {
             setIsProjectSelected(false);
             setIsMenuSelected(false);
+            document.body.style.overflow = "unset";
         };
 
         router.events.on("routeChangeStart", handleRouteChange);
 
         return () => {
             router.events.off("routeChangeStart", handleRouteChange);
+            document.body.style.overflow = "unset";
         };
     }, [router]);
 
@@ -52,7 +62,7 @@ const Header = () => {
                         <div className={styles.headerMobileActions}>
                             <div className={styles.option}>
                                 <div onClick={handleMenuClick}>
-                                    <MenuIcon />
+                                    <MenuIcon/>
                                 </div>
                             </div>
                         </div>
@@ -62,9 +72,11 @@ const Header = () => {
                                  onClick={handleProjectsClick}>Projects
                             </div>
                             <div className={styles.option}
-                                 onClick={() => router.push("/partners")}>Partners</div>
+                                 onClick={() => router.push("/partners")}>Partners
+                            </div>
                             <div className={styles.option}
-                                 onClick={() => router.push("/how-we-work")}>How we work</div>
+                                 onClick={() => router.push("/how-we-work")}>How we work
+                            </div>
 
                             <div className={styles.contactButton}
                                  onClick={() => window.location.href = "mailto:info@swdfactory.com"}>
@@ -79,9 +91,11 @@ const Header = () => {
                              onClick={handleProjectsClick}>Projects
                         </div>
                         <div className={styles.option}
-                             onClick={() => router.push("/partners")}>Partners</div>
+                             onClick={() => router.push("/partners")}>Partners
+                        </div>
                         <div className={styles.option}
-                             onClick={() => router.push("/how-we-work")}>How we work</div>
+                             onClick={() => router.push("/how-we-work")}>How we work
+                        </div>
                     </div>
 
                     <div className={`${styles.projectSectionWrapper} ${isProjectSelected && styles.opened}`}>
@@ -94,8 +108,7 @@ const Header = () => {
 
             <div className={`${styles.headerBackdrop} ${isProjectSelected && styles.opened}`}
                  onClick={handleProjectsClick}></div>
-        </div>
-    );
+        </div>);
 };
 
 export default Header;
