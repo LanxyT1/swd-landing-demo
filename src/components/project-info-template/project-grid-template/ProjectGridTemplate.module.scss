@@ -47,3 +47,17 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: $indent-midi;
+
+    .card {
+      padding: $indent-main;
+      gap: $indent-midi;
+      line-height: 28px;
+    }
+  }
+}

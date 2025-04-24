@@ -24,3 +24,21 @@ $text-max-width: 70%;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .list {
+    .card {
+      padding: $indent-mini-plus $indent-main;
+      line-height: 28px;
+
+      +.card {
+        margin-top: $indent-midi;
+      }
+
+      span {
+        max-width: $text-max-width;
+        line-height: 28px;
+      }
+    }
+  }
+}

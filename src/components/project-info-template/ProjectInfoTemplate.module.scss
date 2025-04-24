@@ -67,3 +67,43 @@ $text-max-width: 70%;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    .section {
+      .heroSection {
+        padding: $indent-main;
+        gap: $indent-midi;
+        margin: 0 $indent-midi;
+        width: calc(100% - $indent-max);
+
+        .heroTitleSection {
+          font-size: 24px;
+          max-width: 100%;
+        }
+
+        .heroDescription {
+          line-height: 28px;
+          max-width: 100%;
+        }
+      }
+
+      span {
+        line-height: 28px;
+
+        +.containerWrapper {
+          margin-top: $indent-midi;
+        }
+      }
+
+      &.footerSection {
+        .footer {
+          line-height: 28px;
+          max-width: 100%;
+          padding: 0 $indent-midi;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

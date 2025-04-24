@@ -33,8 +33,10 @@
     padding: 0 $indent-midi;
 
     .title {
-      font-size: 12px;
       margin: 0 auto $indent-midi auto;
+      font-size: 12px !important;
+      line-height: normal !important;
+      font-weight: 600 !important;
     }
 
     .secondaryText {
