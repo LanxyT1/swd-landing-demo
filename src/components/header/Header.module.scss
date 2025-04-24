@@ -117,6 +117,8 @@
 @media (max-width: 768px) {
   .headerWrapper {
     .header {
+      top: $indent-mini-plus;
+
       .headerContainer {
         padding: 0 $indent-main;
         margin: 0 $indent-mini;
