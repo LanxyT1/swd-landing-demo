@@ -114,6 +114,7 @@ $gap-margin: 150px;
       .technologiesWrapper {
         gap: $indent-max;
         flex-direction: column;
+        padding: 0 $indent-mini-plus $indent-max-plus;
 
         .title {
           font-size: 24px;

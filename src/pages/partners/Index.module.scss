@@ -101,8 +101,8 @@ $gap-margin: 150px;
       margin: $indent-main 0 auto;
 
       .rowSection {
-        padding: $indent-mini-plus;
-        border-radius: $border-radius-medium;
+        padding: $indent-main-double $indent-mini-plus;
+        border-radius: $border-radius-large;
         background-color: $background-dark-color;
         margin: $indent-max-plus 0;
 
@@ -143,7 +143,7 @@ $gap-margin: 150px;
 
       .title {
         font-size: 20px;
-        margin-top: $indent-max;
+        margin-top: 0;
         margin-bottom: $indent-midi;
       }
 

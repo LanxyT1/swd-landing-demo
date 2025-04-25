@@ -30,10 +30,10 @@
 
 @media (max-width: 768px) {
   .containerWrapper {
-    padding: 0 $indent-midi;
+    padding: 0 $indent-mini;
 
     &.backgroundContainer {
-      padding: $indent-main-double $indent-midi;
+      padding: $indent-main-double $indent-mini-plus;
       background: $background-dark-color;
       margin: 0 $indent-mini;
       width: calc(100% - $indent-midi);

@@ -33,7 +33,7 @@ export const partnerList = [
     },
     {
         name: "“Baltijas Transporta Informācija” (BTI) Ltd",
-        logo: `${pathUrl}/partners/btg.jpg`,
+        logo: `${pathUrl}/partners/bti.jpg`,
         description: "Our subsidiary company, dedicated to the maintenance and support of the "
             + "nationwide Latvian bus ticketing system “Baltic Lines”, originally developed by "
             + "our team. BTI successfully implemented “Baltic Lines” across all coach terminals "
