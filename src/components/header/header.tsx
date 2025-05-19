@@ -75,6 +75,9 @@ const Header = () => {
                                  onClick={() => router.push("/partners")}>Partners
                             </div>
                             <div className={styles.option}
+                                 onClick={() => router.push("/used-technologies")}>Technologies
+                            </div>
+                            <div className={styles.option}
                                  onClick={() => router.push("/how-we-work")}>How we work
                             </div>
 
@@ -86,12 +89,15 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <div className={`${styles.menuOptions} ${isMenuSelected && styles.opened}`}>
-                        <div className={`${styles.option} ${isProjectSelected && styles.selectedOption}`}
+                    <div className={`${styles.menuOptions} ${isMenuSelected && !isProjectSelected && styles.opened}`}>
+                        <div className={`${styles.option} ${styles.selectedOption}`}
                              onClick={handleProjectsClick}>Projects
                         </div>
                         <div className={styles.option}
                              onClick={() => router.push("/partners")}>Partners
+                        </div>
+                        <div className={styles.option}
+                             onClick={() => router.push("/used-technologies")}>Technologies
                         </div>
                         <div className={styles.option}
                              onClick={() => router.push("/how-we-work")}>How we work

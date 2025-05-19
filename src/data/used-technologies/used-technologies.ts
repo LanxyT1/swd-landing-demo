@@ -1,6 +1,6 @@
 export const usedTechnologies = [
     {
-        title: "Health Science & Bio Informatics",
+        title: "Architectural Patterns and Practices",
         list: [
             {
                 title: "Microservice Architecture",

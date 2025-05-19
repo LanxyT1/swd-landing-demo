@@ -81,6 +81,7 @@
         max-height: 0;
         overflow: hidden;
         display: flex;
+        flex-direction: column;
         gap: $indent-mini;
         transition: $transition-animate;
         justify-content: center;
@@ -91,6 +92,7 @@
           pointer-events: all;
           margin-bottom: $indent-main;
           max-height: 170px;
+          overflow: visible;
         }
 
         .option {

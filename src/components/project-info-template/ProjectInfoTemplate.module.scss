@@ -74,8 +74,8 @@ $text-max-width: 70%;
       .heroSection {
         padding: $indent-main;
         gap: $indent-midi;
-        margin: 0 $indent-midi;
-        width: calc(100% - $indent-max);
+        margin: 0 $indent-mini;
+        width: calc(100% - $indent-midi);
 
         .heroTitleSection {
           font-size: 24px;
