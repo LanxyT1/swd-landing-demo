@@ -2,10 +2,12 @@ import {ProjectInfo} from "@/types/project-info-list";
 
 export const projectInfo: ProjectInfo = {
     title: "BalticLines System - Intercity and International Coach Transportation Management Tool",
-    description: "The Energy Assurance Toolkit is a system designed to support the ongoing operation " +
-        "and maintenance of solar energy systems. It provides detailed calculations of maintenance " +
-        "costs, monitors the technical condition of components, and helps ensure the long-term " +
-        "efficiency and reliability of existing installations.",
+    description: "Web-based system designed to manage and administer the economic and informational " +
+        "relationships between all participants involved in intercity and international coach " +
+        "transportation. It serves bus terminals, coach operators, ticket agencies, and passengers, " +
+        "streamlining operations and improving service quality. Initially developed for the Riga " +
+        "International Bus Terminal, BalticLines has grown into a nationwide system used by all Latvian " +
+        "bus terminals and integrated with external carrier and ticketing systems to support seamless operations.",
     footer: "BalticLines is a comprehensive solution that supports the efficient management of " +
         "intercity and international coach transportation, ensuring improved service for operators " +
         "and passengers alike.",

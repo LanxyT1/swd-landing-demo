@@ -7,7 +7,7 @@ export const PROJECT_HEALTH_LINKS: Readonly<HeaderProjectLink[]> = Object.freeze
         href: "/health-project/cosmxda"
     },
     {
-        title: "DSPADA",
+        title: "DSPDA",
         href: "/health-project/dspda"
     },
     {
