@@ -23,24 +23,26 @@ const HeaderProjects = () => {
                 <Link key={index}
                       className={styles.link}
                       href={link.href}
-                      shallow>{link.title}</Link>
+                      shallow>
+                    <div className={styles.linkWrapper}>
+                        <div className={styles.title}>{link.title}</div>
+                        <div className={styles.description}>{link.description}</div>
+                    </div>
+                </Link>
             );
         });
     };
 
     return (
         <div className={styles.projectSectionWrapper}>
-            <div className={styles.sectionDescription}>
-                We consider each our client as a potential partner and we believe that there is always
-                a possibility to create a long-term win-win relationships between companies.
-            </div>
-
             <div className={styles.cardsWrapper}>
                 <div className={styles.card}>
-                    <HealthIcon className={styles.icon} />
+                    <div className={styles.cardHeader}>
+                        <HealthIcon className={styles.icon} />
 
-                    <div className={styles.cardTitle}>
-                        Health Science <br /> & Bio Informatics
+                        <div className={styles.cardTitle}>
+                            Health Science <br /> & Bio Informatics
+                        </div>
                     </div>
 
                     <div className={styles.linkOptions}>
@@ -49,10 +51,12 @@ const HeaderProjects = () => {
                 </div>
 
                 <div className={styles.card}>
-                    <SolarIcon className={styles.icon} />
+                    <div className={styles.cardHeader}>
+                        <SolarIcon className={styles.icon} />
 
-                    <div className={styles.cardTitle}>
-                        Solar energy
+                        <div className={styles.cardTitle}>
+                            Solar energy
+                        </div>
                     </div>
 
                     <div className={styles.linkOptions}>
@@ -61,10 +65,12 @@ const HeaderProjects = () => {
                 </div>
 
                 <div className={styles.card}>
-                    <TransportIcon className={styles.icon} />
+                    <div className={styles.cardHeader}>
+                        <TransportIcon className={styles.icon} />
 
-                    <div className={styles.cardTitle}>
-                        Transportation <br /> & Logistics
+                        <div className={styles.cardTitle}>
+                            Transportation <br /> & Logistics
+                        </div>
                     </div>
 
                     <div className={styles.linkOptions}>
@@ -73,10 +79,12 @@ const HeaderProjects = () => {
                 </div>
 
                 <div className={styles.card}>
-                    <CustomBuildIcon className={styles.icon} />
+                    <div className={styles.cardHeader}>
+                        <CustomBuildIcon className={styles.icon} />
 
-                    <div className={styles.cardTitle}>
-                        Other Projects
+                        <div className={styles.cardTitle}>
+                            Other Projects
+                        </div>
                     </div>
 
                     <div className={styles.linkOptions}>

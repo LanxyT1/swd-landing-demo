@@ -15,7 +15,7 @@
 
   .cardsWrapper {
     display: flex;
-    gap: $indent-main;
+    gap: $indent-midi;
     margin-bottom: $indent-max;
 
     .card {
@@ -24,11 +24,32 @@
       border: $swd-border;
       padding: $indent-main;
 
+      .cardHeader {
+        display: flex;
+        align-items: center;
+        margin-bottom: $indent-main;
+      }
+
       .linkOptions {
         margin-top: $indent-main;
 
         .link {
-          color: $swd-primary-color;
+          color: $swd-primary-text-color;
+          text-decoration: none;
+          transition: $transition-animate;
+
+          &:hover {
+            color: $swd-primary-color;
+            transform: scale(0.96) translateX(-$padding-step);
+          }
+
+          .title {
+            font-weight: 600;
+          }
+
+          .description {
+            font-size: 14px;
+          }
 
           +.link {
             margin-top: $indent-mini-plus;
@@ -37,12 +58,11 @@
       }
 
       .icon {
-        margin-bottom: $indent-main;
+        margin-right: $indent-main;
       }
 
       .cardTitle {
         font-weight: 600;
-        height: 50px;
       }
     }
   }
@@ -59,9 +79,29 @@
     .cardsWrapper {
       width: 100%;
       overflow: auto;
+      padding: 0 $indent-main;
+      box-sizing: border-box;
 
       .card {
         min-width: 220px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .projectSectionWrapper {
+    .cardsWrapper {
+      .card {
+        .link {
+          .title {
+            font-size: 14px;
+          }
+
+          .description {
+            font-size: 12px !important;
+          }
+        }
       }
     }
   }

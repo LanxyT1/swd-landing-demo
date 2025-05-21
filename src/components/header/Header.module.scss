@@ -120,7 +120,7 @@
           opacity: 1;
           transform: translateY(0px);
           pointer-events: all;
-          max-height: 550px;
+          max-height: 650px;
         }
       }
     }
@@ -188,7 +188,8 @@
 
         .projectSectionWrapper {
           &.opened {
-            max-height: 650px;
+            max-height: 750px;
+            margin: 0 (-$indent-main);
           }
         }
       }
